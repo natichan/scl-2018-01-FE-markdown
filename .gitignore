@@ -1,6 +1,6 @@
 .vs
+.vscode
 node_modules
 package-lock.json
-.vscode
 sum.js
 sum.test.js
