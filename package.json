@@ -1,0 +1,29 @@
+{
+  "name": "scl-2018-01-fe-markdown",
+  "version": "0.1.0",
+  "description": "library in javascript to check links markdowns files ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natichan/scl-2018-01-FE-markdown.git"
+  },
+  "keywords": [
+    "test",
+    "development",
+    "markdown",
+    "node",
+    "javascript"
+  ],
+  "author": "Natalia MH <nataliamh.88qgmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natichan/scl-2018-01-FE-markdown/issues"
+  },
+  "homepage": "https://github.com/natichan/scl-2018-01-FE-markdown#readme",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  }
+}
