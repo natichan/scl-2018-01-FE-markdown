@@ -12,16 +12,15 @@ function testingPath(a){
     //console.log(absolutePath) 
 }
 function validateTypeMarkdownFile(a){
-    filesAllows = '.md'; // declaro archivos permitidos 
+    filesAllow = '.md'; // declaro archivos permitidos 
     extension = (a.substring(a.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
     if(filesAllows === extension){
         console.log('Archivo permitido');
         readCompleteFile(a);
     }else{
-        console.log('Solo son permitidos archivos de tipo' + filesAllows);       
+        console.log('Solo son permitidos archivos de tipo' + filesAllow);       
     }
 }
-
 function readCompleteFile (a){
     fs.readFile( a, 'utf-8', (err, data) => {
         if(err) throw err;
