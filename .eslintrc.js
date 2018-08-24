@@ -8,8 +8,4 @@ module.exports = {
         "jest/prefer-to-have-length": "warn",
         "jest/valid-expect": "error"
     },
-    "env": {
-        "browser": true,
-        "node": true
-    }
 };

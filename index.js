@@ -5,4 +5,3 @@ let mdlinks = require('./md-links')
 let [,, ...args] = process.argv;
 
 mdlinks.testingPath(args[0]);
-
