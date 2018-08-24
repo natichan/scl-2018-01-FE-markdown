@@ -1,7 +1,7 @@
 {
   "name": "md-links13",
   "version": "1.0.0",
-  "description": "library in javascript to check links markdowns files ",
+  "description": "library in javascript to check links of markdown files ",
   "main": "index.js",
   "bin": {
     "mdlinks": "index.js"
@@ -28,8 +28,6 @@
   "homepage": "https://github.com/natichan/scl-2018-01-FE-markdown#readme",
   "devDependencies": {
     "eslint": "^5.4.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
     "jest": "^23.5.0",
     "node-fetch": "^2.2.0"
   },
