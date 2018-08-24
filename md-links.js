@@ -8,7 +8,6 @@ const fs = require('fs');
 
 function testingPath(a){
     const absolutePath = path.resolve(a); //convierte la ruta a absoluta
-    readCompleteFile(absolutePath);
     validateTypeMarkdownFile(absolutePath)
     //console.log(absolutePath) 
 }
@@ -17,7 +16,7 @@ function validateTypeMarkdownFile(a){
     extension = (a.substring(a.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
     if(filesAllows === extension){
         console.log('Archivo permitido');
-        return true;
+        readCompleteFile(a);
     }else{
         console.log('Solo son permitidos archivos de tipo' + filesAllows);       
     }
@@ -26,7 +25,7 @@ function validateTypeMarkdownFile(a){
 function readCompleteFile (a){
     fs.readFile( a, 'utf-8', (err, data) => {
         if(err) throw err;
-        console.log(data);   
+        // console.log(data);   
     })
 }
 /* fetch('https://www.google.cl/').then((response) => {
