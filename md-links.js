@@ -2,6 +2,7 @@ const path = require('path'); // console.log(path);
 const fs = require('fs');
 const marked = require('marked');
 const fetch = require('node-fetch');
+const color = require('colors');
 
 function testingPath(pathFile) {
   const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
@@ -58,15 +59,17 @@ function markdownLinkExtractor(markdown) {
   // console.log(links);
   return links;
 };
+
 function validateLink(links) {
   links.forEach(element => {
     let url = element.href;
-    fetch(url).then((response) => {
-      return response;
-    }).then(data => {
-      console.log(data.url);
+    fetch(url).then(response => response
+    ).then(data => {
+      console.log(data.url.blue);
       console.log(data.status);
-      console.log(data.statusText);
+      console.log(data.statusText.yellow); 
+    }).catch(error => {
+      console.error('ERROR > ' + error.status);
     });
   });
 }
