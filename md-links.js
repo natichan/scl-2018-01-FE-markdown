@@ -1,7 +1,7 @@
 const path = require('path'); // console.log(path);
 const fs = require('fs');
 const marked = require('marked');
-// const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
 function testingPath(pathFile) {
   const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
@@ -12,7 +12,7 @@ function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
   const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
   if (filesAllow === extension) {
-    console.log('Archivo permitido');
+    // console.log('Archivo permitido');
     readCompleteFile(pathFile);
   } else {
     console.log('Solo son permitidos archivos de tipo' + filesAllow);
@@ -54,13 +54,22 @@ function markdownLinkExtractor(markdown) {
     });
   };
   Marked(markdown, {renderer: renderer});
-  console.log(links);
+  validateLink(links);
+  // console.log(links);
   return links;
 };
-
-/* fetch('https://www.google.cl/').then((response) => {
-    console.log(response);
-}) */
+function validateLink(links) {
+  links.forEach(element => {
+    let url = element.href;
+    fetch(url).then((response) => {
+      return response;
+    }).then(data => {
+      console.log(data.url);
+      console.log(data.status);
+      console.log(data.statusText);
+    });
+  });
+}
 module.exports = {
   testingPath
 };
