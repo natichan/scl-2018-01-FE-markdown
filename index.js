@@ -4,4 +4,4 @@ let mdlinks = require('./md-links');
 // grab provided args
 let [,, ...args] = process.argv;
 
-mdlinks.convertToAbsolutePath(args[0]);
+mdlinks.validateTypeMarkdownFile(args[0]);
