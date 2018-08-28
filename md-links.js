@@ -5,9 +5,27 @@ const fetch = require('node-fetch');
 const color = require('colors');
 const Marked = require('marked');
 
-function convertToAboslutePath(pathFile) {
+function convertToAbsolutePath(pathFile) {
+  return new Promise((resolve, reject) =>{
+
+  })
   const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
   validateTypeMarkdownFile(absolutePath);
+}
+
+
+export default function request(url) {
+  return new Promise((resolve, reject) => {
+    const userID = parseInt(url.substr('/users/'.length), 10);
+    process.nextTick(
+      () =>
+        users[userID]
+          ? resolve(users[userID])
+          : reject({
+              error: 'User with ' + userID + ' not found.',
+            }),
+    );
+  });
 }
 function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
@@ -79,5 +97,5 @@ function validateLink(links) {
   });
 }
 module.exports = {
-  convertToAboslutePath
+  convertToAbsolutePath
 };
