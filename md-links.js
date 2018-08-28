@@ -27,18 +27,20 @@ function readCompleteFile(pathFile) {
       }
       resolve(data);
       let dataLine = data.split('\n');
-      console.log(dataLine);
       // console.log(dataLine);
-      /* dataLine.forEach(element=> {
-      console.log(element);     
-    }); */
-      /* forEach(elemento, index) */
-      // console.log(data.substr(1, 50)); // para cortar un texto
-      markdownLinkExtractor(data);
+      let dataExtractLine = dataLine.map(element => {
+      // console.log(element);
+        const linePosition = (dataLine.indexOf(element) + 1);
+        // console.log(dataLine.indexOf(element) + 1);
+        return markdownLinkExtractor(pathFile, element, linePosition);    
+      });  
+      dataExtractLine = dataExtractLine.filter(element => element.length !== 0);
+      dataExtractLine = dataExtractLine.reduce((elementOne, elementTwo) => elementOne.concat(elementTwo));
+      console.log(dataExtractLine);
     });
   });
 }
-function markdownLinkExtractor(markdown) {
+function markdownLinkExtractor(pathFile, markdown, position) {
   const links = [];
   const renderer = new Marked.Renderer();
   // Taken from https://github.com/markedjs/marked/issues/1279
@@ -52,7 +54,9 @@ function markdownLinkExtractor(markdown) {
     links.push({
       href: href,
       text: text,
-      title: title
+      title: title,
+      line: position,
+      path: pathFile
     });
   };
   renderer.image = function(href, title, text) {
@@ -61,28 +65,31 @@ function markdownLinkExtractor(markdown) {
     links.push({
       href: href,
       text: text,
-      title: title
+      title: title,
+      line: position,
+      path: pathFile
+
     });
   };
   Marked(markdown, {renderer: renderer});
-  validateLink(links);
+  // validateLink(links);
   // console.log(links);
   return links;
 };
 
-function validateLink(links) {
-  links.forEach(element => {
-    let url = element.href;
-    fetch(url).then(response => response
-    ).then(data => {
-      /*  console.log(data.url.blue);
-      console.log(data.status);
-      console.log(data.statusText.yellow);  */
-    }).catch(error => {
-      console.error('ERROR > ' + error.status);
-    });
-  });
-}
+// function validateLink(links) {
+//   links.forEach(element => {
+//     let url = element.href;
+//     fetch(url).then(response => response
+//     ).then(data => {
+//       /*  console.log(data.url.blue);
+//       console.log(data.status);
+//       console.log(data.statusText.yellow);  */
+//     }).catch(error => {
+//       console.error('ERROR > ' + error.status);
+//     });
+//   });
+// }
 module.exports = {
   convertToAbsolutePath
 };
