@@ -7,13 +7,15 @@ const Marked = require('marked');
 
 function convertToAbsolutePath(pathFile) {
   return new Promise((resolve, reject) => {
-    if (pathFile === '') reject('Debes ingresar un archivo');
+    const filesAllow = '.md'; // declaro archivos permitidos
+    const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
+    if (filesAllow !== extension) reject('Debes ingresar un archivo de tipo' + filesAllow);
     if (resolve) 
       absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
-    return (validateTypeMarkdownFile(absolutePath));
+    return (readCompleteFile(absolutePath));
   }); 
 }
-function validateTypeMarkdownFile(pathFile) {
+/* function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
   const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
   if (filesAllow === extension) {
@@ -22,7 +24,7 @@ function validateTypeMarkdownFile(pathFile) {
   } else {
     console.log('Solo son permitidos archivos de tipo' + filesAllow);
   }
-}
+} */
 function readCompleteFile(pathFile) {
   return new Promise((resolve, reject) => {
     fs.readFile(pathFile, 'utf-8', (err, data) => {
