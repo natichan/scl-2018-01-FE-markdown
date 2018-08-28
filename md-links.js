@@ -6,8 +6,12 @@ const color = require('colors');
 const Marked = require('marked');
 
 function convertToAbsolutePath(pathFile) {
-  const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
-  validateTypeMarkdownFile(absolutePath);
+  return new Promise((resolve, reject) => {
+    if (pathFile === '') reject('Debes ingresar un archivo');
+    if (resolve) 
+      absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
+    return (validateTypeMarkdownFile(absolutePath));
+  }); 
 }
 function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
@@ -77,19 +81,19 @@ function markdownLinkExtractor(pathFile, markdown, position) {
   return links;
 };
 
-// function validateLink(links) {
-//   links.forEach(element => {
-//     let url = element.href;
-//     fetch(url).then(response => response
-//     ).then(data => {
-//       /*  console.log(data.url.blue);
-//       console.log(data.status);
-//       console.log(data.statusText.yellow);  */
-//     }).catch(error => {
-//       console.error('ERROR > ' + error.status);
-//     });
-//   });
-// }
+function validateLink(links) {
+  links.forEach(element => {
+    let url = element.href;
+    fetch(url).then(response => response
+    ).then(data => {
+      /*  console.log(data.url.blue);
+      console.log(data.status);
+      console.log(data.statusText.yellow); */
+    }).catch(error => {
+      console.error('ERROR > ' + error.status);
+    });
+  });
+}
 module.exports = {
   convertToAbsolutePath
 };
