@@ -12,21 +12,6 @@ function convertToAbsolutePath(pathFile) {
   const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
   validateTypeMarkdownFile(absolutePath);
 }
-
-
-export default function request(url) {
-  return new Promise((resolve, reject) => {
-    const userID = parseInt(url.substr('/users/'.length), 10);
-    process.nextTick(
-      () =>
-        users[userID]
-          ? resolve(users[userID])
-          : reject({
-              error: 'User with ' + userID + ' not found.',
-            }),
-    );
-  });
-}
 function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
   const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
