@@ -6,9 +6,6 @@ const color = require('colors');
 const Marked = require('marked');
 
 function convertToAbsolutePath(pathFile) {
-  return new Promise((resolve, reject) =>{
-
-  })
   const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
   validateTypeMarkdownFile(absolutePath);
 }
@@ -23,19 +20,24 @@ function validateTypeMarkdownFile(pathFile) {
   }
 }
 function readCompleteFile(pathFile) {
-  fs.readFile(pathFile, 'utf-8', (err, data) => {
-    if (err) throw err;
-    let dataLine = data.split('\n');
-    // console.log(dataLine);
- /*    dataLine.forEach(element=> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(pathFile, 'utf-8', (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+      let dataLine = data.split('\n');
+      console.log(dataLine);
+      // console.log(dataLine);
+      /* dataLine.forEach(element=> {
       console.log(element);     
     }); */
-    /* forEach(elemento, index) */
-    // console.log(data.substr(1, 50)); // para cortar un texto
-    markdownLinkExtractor(data);
+      /* forEach(elemento, index) */
+      // console.log(data.substr(1, 50)); // para cortar un texto
+      markdownLinkExtractor(data);
+    });
   });
 }
-
 function markdownLinkExtractor(markdown) {
   const links = [];
   const renderer = new Marked.Renderer();
