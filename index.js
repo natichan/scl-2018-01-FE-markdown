@@ -4,4 +4,4 @@ let mdlinks = require('./md-links');
 // grab provided args
 let [,, ...args] = process.argv;
 
-mdlinks.testingPath(args[0]);
+mdlinks.convertToAboslutePath(args[0]);

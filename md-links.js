@@ -1,13 +1,13 @@
-const path = require('path'); // console.log(path);
+const path = require('path');
 const fs = require('fs');
 const marked = require('marked');
 const fetch = require('node-fetch');
 const color = require('colors');
+const Marked = require('marked');
 
-function testingPath(pathFile) {
+function convertToAboslutePath(pathFile) {
   const absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
   validateTypeMarkdownFile(absolutePath);
-  // console.log(absolutePath)
 }
 function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
@@ -22,11 +22,16 @@ function validateTypeMarkdownFile(pathFile) {
 function readCompleteFile(pathFile) {
   fs.readFile(pathFile, 'utf-8', (err, data) => {
     if (err) throw err;
-    // console.log(data);
+    let dataLine = data.split('\n');
+    // console.log(dataLine);
+ /*    dataLine.forEach(element=> {
+      console.log(element);     
+    }); */
+    /* forEach(elemento, index) */
+    // console.log(data.substr(1, 50)); // para cortar un texto
     markdownLinkExtractor(data);
   });
 }
-const Marked = require('marked');
 
 function markdownLinkExtractor(markdown) {
   const links = [];
@@ -65,14 +70,14 @@ function validateLink(links) {
     let url = element.href;
     fetch(url).then(response => response
     ).then(data => {
-      console.log(data.url.blue);
+      /*  console.log(data.url.blue);
       console.log(data.status);
-      console.log(data.statusText.yellow); 
+      console.log(data.statusText.yellow);  */
     }).catch(error => {
       console.error('ERROR > ' + error.status);
     });
   });
 }
 module.exports = {
-  testingPath
+  convertToAboslutePath
 };
