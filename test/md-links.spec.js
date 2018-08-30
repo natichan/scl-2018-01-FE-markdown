@@ -1,4 +1,4 @@
-const mdLinks = require('../md-links');
+const mdLinks = require('../lib/md-links');
 
 describe('validateTypeMarkdownFile(pathFile)', () => {
   test('válida que el archivo sea tipo md', () => {

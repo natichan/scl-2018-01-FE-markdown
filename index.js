@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-let mdlinks = require('./md-links');
+let mdlinks = require('./lib/md-links');
 // grab provided args
 let [,, ...args] = process.argv;
 
