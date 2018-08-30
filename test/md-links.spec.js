@@ -1,6 +1,9 @@
-const sum = require('../md-links');
+const mdLinks = require('../md-links');
 
-test('validateTypeMarkdownFile(pathFile) válida que el archivo sea tipo md', () => {
-  expect(validateTypeMarkdownFile(README.md).toBe(true));
-  expect(validateTypeMarkdownFile(index.js).toBe(false));
+describe('validateTypeMarkdownFile(pathFile)', () => {
+  test('válida que el archivo sea tipo md', () => {
+    function validateTypeMarkdownFile(pathFile) {
+      expect((README.md).toBeTruthy());
+    }
+  });
 });

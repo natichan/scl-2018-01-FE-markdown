@@ -4,7 +4,7 @@ const marked = require('marked');
 const fetch = require('node-fetch');
 const Marked = require('marked');
 
-let validateTypeMarkdownFile = function(pathFile) {
+function validateTypeMarkdownFile(pathFile) {
   const filesAllow = '.md'; // declaro archivos permitidos
   const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
   if (filesAllow !== extension) {
@@ -105,5 +105,6 @@ function validateLink(links) {
   });
 }
 module.exports = {
-  readCompleteFile
+  'readCompleteFile': readCompleteFile,
+  'validateTypeMarkdownFile': validateTypeMarkdownFile
 };
