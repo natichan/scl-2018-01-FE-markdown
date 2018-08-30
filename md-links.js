@@ -4,21 +4,21 @@ const marked = require('marked');
 const fetch = require('node-fetch');
 const Marked = require('marked');
 
-// function validateTypeMarkdownFile(pathFile) {
-//   const filesAllow = '.md'; // declaro archivos permitidos
-//   const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
-//   if (filesAllow !== extension) {
-//     console.log('Solo son permitidos archivos de tipo markdown(md)');
-//   } else {
-//     console.log('Archivo permitido');
-//     return true;
-//   }
-// }
-// function convertToAbsolutePath(pathFile) {
-//   absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
-//   console.log(absolutePath);
-//   return absolutePath;
-// }; 
+let validateTypeMarkdownFile = function(pathFile) {
+  const filesAllow = '.md'; // declaro archivos permitidos
+  const extension = (pathFile.substring(pathFile.lastIndexOf('.')).toLowerCase()); // divide para comprobar desde el punto en adelante el tipo de extension
+  if (filesAllow !== extension) {
+    console.log('Solo son permitidos archivos de tipo markdown(md)');
+  } else {
+    console.log('Archivo permitido');
+    return true;
+  }
+}
+let convertToAbsolutePath = function(pathFile) {
+  absolutePath = path.resolve(pathFile); // convierte la ruta a absoluta
+  console.log(absolutePath);
+  return absolutePath;
+}; 
 function readCompleteFile(pathFile) {
   fs.readFile(pathFile, 'utf-8', (err, data) => {
     let dataLine = data.split('\n');
@@ -43,7 +43,10 @@ function readCompleteFile(pathFile) {
         line: element.line,
         path: element.path
       };
-      console.log(Object.values(line));
+      let objectLine = Object.values(line);
+      objectLine.forEach(element => {
+        console.log(element);
+      });
     });
     return dataExtractLine;
   });
@@ -92,8 +95,10 @@ function validateLink(links) {
         status: data.status,
         statusText: data.statusText
       };
-      console.log(Object.values(status));
-    
+      let objectStatus = Object.values(status);
+      objectStatus.forEach(element => {
+        console.log(element);
+      });
     }).catch(error => {
       console.error('ERROR > ' + error.status);
     });
