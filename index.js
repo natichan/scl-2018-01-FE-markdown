@@ -9,12 +9,11 @@ if (args.includes('--validate')) options.validate = true;
 mdlinks.mdLinks(args[0], options).then((links) => {
   if (options.validate) {
     links.forEach(element => {
-      console.log(element.path + ':' + element.line + ' ' + element.href + ' ' + element.status + ' ' + element.statusTwo + ' ' + element.text);      
+      console.log(element.path.green + ':' + element.line + ' ' + element.href + ' ' + element.status + ' ' + element.statusTwo + ' ' + element.text);      
     });
-    // console.log(links);
   } else { 
     links.forEach(element => {
-      console.log(element.path + ':' + element.line + ' ' + element.href + ' ' + element.text);
+      console.log(element.path.green + ':' + element.line + ' ' + element.href + ' ' + element.text);
     });
   }
 }).catch((error) => {
