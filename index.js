@@ -22,4 +22,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = mdLinks;
+module.exports = mdlinks;
