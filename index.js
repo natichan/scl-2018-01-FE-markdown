@@ -19,4 +19,3 @@ mdlinks.mdLinks(args[0], options).then((links) => {
 }).catch((error) => {
   console.error('Error >' + error);
 });
-
