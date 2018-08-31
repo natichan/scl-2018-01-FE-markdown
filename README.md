@@ -1,4 +1,4 @@
-# Md links verification
+# MD LINKS VERIFICATION
 
 ## Introducción
 
@@ -17,6 +17,8 @@ Es por eso que 'md-links-verification' lee y analiza archivos en formato `Markdo
 
 Para instalar la libreria 
 `npm install <github-user>/md-links`
+o
+`npm i md-links-verification`
 
 ### Al importar el módulo
 #### `mdLinks(path, options)`
