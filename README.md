@@ -7,7 +7,7 @@ Versiones de la librería.
 Documentación de la Librería (Features, link de Demo, test, etc...).
 Ejemplos (snippets) de uso.
 Y todo lo relevante para que cualquier developer que quiera usar tu librería pueda hacerlo sin inconvenientes
-## Preámbulo
+## Introducción
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
 ligero muy popular entre developers. Es usado en muchísimas plataformas que
@@ -26,31 +26,6 @@ algunas estadísticas.
 
 ![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
 
-## Introducción
-
-[Node.js](https://nodejs.org/es/) es un entorno de ejecución para JavaScript
-construido con el [motor de JavaScript V8 de Chrome](https://developers.google.com/v8/).
-Esto nos va a permitir ejecutar JavaScript en el entorno del sistema operativo,
-ya sea tu máquina o un servidor, lo cual nos abre las puertas para poder interactuar con
-el sistema operativo, sistema de archivos, redes, etc...
-En este proyecto nos alejamos un poco del navegador para construir un programa
-que se ejecute usando Node.js, donde aprenderemos sobre cómo interactuar con el
-sistema, archivos y con el entorno (proceso, env, stdin/stdout/stderr), ...
-
-## Objetivos
-
-El objetivo práctico de este proyecto es que aprendas cómo crear tu propia
-**librería** (o biblioteca - _library_) en JavaScript.
-Diseñar tu propia librería es una experiencia fundamental para cualquier
-desarrollador porque que te obliga a pensar en la interfaz (API) de tus _módulos_
-y como será usado por otros developers, debes tener especial consideración en
-peculiaridades del lenguaje, convenciones y buenas prácticas.
-
-## Consideraciones generales
-
-Este proyecto se debe "resolver" de manera individual.
-La librería debe estar implementada en JavaScript para ser ejecutada con
-Node.js.
 
 ## Parte obligatoria
 
@@ -87,45 +62,20 @@ Tópicos:
 - [File System](https://nodejs.org/api/fs.html)
 - [Asíncronía en js](https://carlosazaustre.com/manejando-la-asincronia-en-javascript/)
 
-### Documentación requerida
 
-En el archivo _README_ de tu proyecto tendrás que incluir:
 
-- Descripción general de la librería.
-- Instrucciones de instalación.
-- Versiones de la librería.
-- Documentación de la Librería (Features, link de Demo, test, etc...).
-- Ejemplos (_snippets_) de uso.
-
-Y todo lo relevante para que cualquier developer que quiera usar tu librería pueda hacerlo sin inconvenientes
-
-### Archivos del proyecto
-
-- `README.md` con descripción del módulo, instrucciones de instalación, uso y
-  documentación del API.
-- `index.js`: Desde este archivo debes exportar una función (`mdLinks`).
-- `package.json` con nombre, versión, descripción, autores, licencia,
-  dependencias, scripts (pretest, test, ...)
-- `.eslintrc` con configuración para linter. Este archivo no
-  se debe cambiar.
-- `.gitignore` para ignorar `node_modules` u otras carpetas que no deban
-  incluirse en control de versiones (`git`).
-- `test/md-links.spec.js` debe contener los tests unitarios para la función
-  `mdLinks()`tu implementación debe pasar estos tests.
 
 ### JavaScript API
 
-El módulo debe poder importarse en otros scripts de Node.js y debe ofrecer la
-siguiente interfaz:
+El módulo se puede importar y ofrece la siguiente interfaz:
 
 #### `mdLinks(path, options)`
 
 ##### Argumentos
 
-- `path`: Ruta absoluta o relativa al archivo. Si la ruta pasada es relativa, debe resolverse como relativa al directorio desde donde se invoca node - _currentworking directory_.
-
+- `path`: Ruta absoluta 
 - `options`: Un objeto con la siguiente propiedad:
-  - `validate`: Valor que determina si se desea validar los links encontrados en el archivo. (tipo de dato booleano)
+  - `validate`: Valor que determina si se desea validar los links encontrados en el archivo. 
 
 ##### Valor de retorno
 
@@ -364,4 +314,3 @@ habilidades blandas. Te aconsejamos revisar la rúbrica:
       lines, y branches.
 - [ ] Pasa tests (y linters) (`npm test`).
 
-[probar fallo](http://audiko.net/404);
