@@ -17,7 +17,8 @@ Es por eso que 'md-links-verification' lee y analiza archivos en formato `Markdo
 
 Para instalar la libreria 
 `npm install <github-user>/md-links`
-o
+
+como dependencia:
 `npm i md-links-verification`
 
 ### Al importar el módulo
