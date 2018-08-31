@@ -9,8 +9,8 @@ if (args.includes('--validate')) options.validate = true;
 
 mdlinks.mdLinks(args[0], options).then((links) => {
   links.forEach(element => {
-    console.log(element.href + ':' + element.line + ' ' + element.text + ' ' + element.path);
+    // console.log(element.path + ':' + element.line + ' ' + element.href + ' ' + element.text);
   }).catch((error) => {
-    console.log('Error >' + error);
+    // console.log('Error >' + error);
   });
 });
