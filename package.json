@@ -1,5 +1,5 @@
 {
-  "name": "md-links13",
+  "name": "md-links-verification",
   "version": "1.0.0",
   "description": "library in javascript to check links of markdown files ",
   "main": "index.js",
