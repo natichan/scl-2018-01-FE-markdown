@@ -15,58 +15,22 @@ Es por eso que 'md-links-verification' lee y analiza archivos en formato `Markdo
 
 ### Instalación
 
-Para instalar la libreria 
-`npm install <github-user>/md-links`
-
-como dependencia:
+Instalar como dependencia:
 `npm i md-links-verification`
 
-### Al importar el módulo
-#### `mdLinks(path, options)`
-
-##### Argumentos
-
-- `path`: Ruta absoluta 
-- `options`: Un objeto con la siguiente propiedad:
-  - `validate`: Valor que determina si se desea validar los links encontrados en el archivo. 
-
-##### Valor de retorno
-
-La función retorna una promesa que resuelve a un arreglo
-(`Array`) de objetos (_Object_), donde cada objeto representa un link y contiene
-las siguientes propiedades:
-
-- `href`: URL encontrada.
-- `text`: Texto que aparecía dentro del link (`<a>`).
-- `file`: Ruta del archivo donde se encontró el link.
-
-#### Ejemplo
-
-```js
-const mdLinks = require("md-links");
-
-mdLinks("./some/example.md")
-  .then(links => {
-    // => [{ href, text, file }]
-  })
-  .catch(console.error);
-
-mdLinks("./some/example.md", { validate: true })
-  .then(links => {
-    // => [{ href, text, file, status, ok }]
-  })
-  .catch(console.error);
-
+##USO
 ### CLI (Línea de comando)
 
 El ejecutable de nuestra aplicación se ejecuta de la siguiente manera:
 
-`md-links <path-to-file> [options]`
+Linea que deberías ejecutar en tu terminal o consola:
+`md-links <file> [options]`
 
+Debes ingresar el archivo directo 
 Por ejemplo:
 
 ```sh
-$ md-links ./some/example.md
+$ md-links example.md
 ./some/example.md:10 http://algo.com/2/3/ Link a algo
 ./some/example.md:15 https://otra-cosa.net/algun-doc.html algún doc
 ./some/example.md:40 http://google.com/ Google
@@ -76,10 +40,10 @@ argumento), analiza el archivo Markdown e imprime los links que vaya
 encontrando, junto con la ruta del archivo y la linea donde aparece, así como
 también el texto que hay dentro del link.
 
-`md-links <path-to-file> --validate`
+`md-links <file> --validate`
 
 ```sh
-$ md-links ./some/example.md --validate
+$ md-links example.md --validate
 ./some/example.md:10 http://algo.com/2/3/ ok 200 Link a algo
 ./some/example.md:15 https://otra-cosa.net/algun-doc.html fail 404 algún doc
 ./some/example.md:40 http://google.com/ ok 301 Google
@@ -88,3 +52,19 @@ $ md-links ./some/example.md --validate
 Vemos que el _output_ en este caso incluye la palabra `ok` o `fail` después de
 la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
 URL.
+
+#### Versiones
+1.0.0
+Versión de prueba (sin funcionamiento)
+1.0.1
+Versión de prueba exportando mdLinks (sin funcionamiento)
+1.0.2
+Versión que ofrece instalación como dependencia
+1.0.3
+Versión con README actualizado
+
+### Ejemplo de uso
+![Comando archivo](https://imgur.com/h4JUvkZ)
+![Resultado](https://imgur.com/YMgSriK)
+![Comando archivo con validate](https://imgur.com/Lxm5rNy)
+![Resultado](https://imgur.com/Urj775C)
