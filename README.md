@@ -64,7 +64,7 @@ Versión que ofrece instalación como dependencia
 Versión con README actualizado
 
 ### Ejemplo de uso
-![Comando archivo](https://imgur.com/h4JUvkZ)
-![Resultado](https://imgur.com/YMgSriK)
-![Comando archivo con validate](https://imgur.com/Lxm5rNy)
-![Resultado](https://imgur.com/Urj775C)
+![Comando archivo con solo archivo](https://i.imgur.com/h4JUvkZ.png)
+![Resultado](https://i.imgur.com/YMgSriK.png)
+![Comando con archivo validate](https://i.imgur.com/Lxm5rNy.png)
+![Resultado](https://i.imgur.com/Urj775C.png)
