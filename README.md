@@ -20,15 +20,19 @@ Instalar como dependencia:
 
 [NPM public library](https://www.npmjs.com/package/md-links-verification)
 
+Instalar como interfaz
+`npm install -g https://github.com/Laboratoria/scl-2018-01-FE-markdown`
+
 ## USO
 ### CLI (Línea de comando)
 
 El ejecutable de nuestra aplicación se ejecuta de la siguiente manera:
 
 Linea que deberías ejecutar en tu terminal o consola:
-`mdlinks <file> [options]`
+`mlinks <file> [options]`
 
 Debes ingresar el archivo directo 
+
 Por ejemplo:
 
 ```sh
@@ -54,8 +58,9 @@ $ mdlinks example.md --validate
 Vemos que el _output_ en este caso incluye la palabra `ok` o `fail` después de
 la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
 URL.
+   ccf3caa..4894bec  master -> master   ccf3caa..4894bec  master -> master 
 
-#### Versiones
+## Versiones
 1.0.0
 Versión de prueba (sin funcionamiento)
 1.0.1
@@ -63,7 +68,9 @@ Versión de prueba exportando mdLinks (sin funcionamiento)
 1.0.2
 Versión que ofrece instalación como dependencia
 1.0.3
-Versión con README actualizado
+Versión con README 
+1.0.4
+Versión con dependencias instaladas para ser instaladas a nivel global, readme actualizado.
 
 ### Ejemplo de uso
 ![Comando archivo con solo archivo](https://i.imgur.com/h4JUvkZ.png)
