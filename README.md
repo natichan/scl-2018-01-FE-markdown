@@ -26,13 +26,13 @@ Instalar como dependencia:
 El ejecutable de nuestra aplicación se ejecuta de la siguiente manera:
 
 Linea que deberías ejecutar en tu terminal o consola:
-`md-links <file> [options]`
+`mdlinks <file> [options]`
 
 Debes ingresar el archivo directo 
 Por ejemplo:
 
 ```sh
-$ md-links example.md
+$ mdlinks example.md
 ./some/example.md:10 http://algo.com/2/3/ Link a algo
 ./some/example.md:15 https://otra-cosa.net/algun-doc.html algún doc
 ./some/example.md:40 http://google.com/ Google
@@ -42,10 +42,10 @@ argumento), analiza el archivo Markdown e imprime los links que vaya
 encontrando, junto con la ruta del archivo y la linea donde aparece, así como
 también el texto que hay dentro del link.
 
-`md-links <file> --validate`
+`mdlinks <file> --validate`
 
 ```sh
-$ md-links example.md --validate
+$ mdlinks example.md --validate
 ./some/example.md:10 http://algo.com/2/3/ ok 200 Link a algo
 ./some/example.md:15 https://otra-cosa.net/algun-doc.html fail 404 algún doc
 ./some/example.md:40 http://google.com/ ok 301 Google
