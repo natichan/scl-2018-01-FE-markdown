@@ -61,15 +61,15 @@ URL.
    ccf3caa..4894bec  master -> master   ccf3caa..4894bec  master -> master 
 
 ## Versiones
-1.0.0
+* 1.0.0
 Versión de prueba (sin funcionamiento)
-1.0.1
+* 1.0.1
 Versión de prueba exportando mdLinks (sin funcionamiento)
-1.0.2
+* 1.0.2
 Versión que ofrece instalación como dependencia
-1.0.3
+* 1.0.3
 Versión con README 
-1.0.4
+* 1.0.4
 Versión con dependencias instaladas para ser instaladas a nivel global, readme actualizado.
 
 ### Ejemplo de uso
