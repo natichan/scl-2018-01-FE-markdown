@@ -18,6 +18,8 @@ Es por eso que 'md-links-verification' lee y analiza archivos en formato `Markdo
 Instalar como dependencia:
 `npm i md-links-verification`
 
+[NPM public library](https://www.npmjs.com/package/md-links-verification)
+
 ##USO
 ### CLI (Línea de comando)
 
