@@ -60,6 +60,12 @@ la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
 URL.
    ccf3caa..4894bec  master -> master   ccf3caa..4894bec  master -> master 
 
+### Ejemplo de uso
+![Comando archivo con solo archivo](https://i.imgur.com/h4JUvkZ.png)
+![Resultado](https://i.imgur.com/YMgSriK.png)
+![Comando con archivo validate](https://i.imgur.com/Lxm5rNy.png)
+![Resultado](https://i.imgur.com/Urj775C.png)
+
 ## Versiones
 * 1.0.0
 Versión de prueba (sin funcionamiento)
@@ -71,9 +77,3 @@ Versión que ofrece instalación como dependencia
 Versión con README 
 * 1.0.4
 Versión con dependencias instaladas para ser instaladas a nivel global, readme actualizado.
-
-### Ejemplo de uso
-![Comando archivo con solo archivo](https://i.imgur.com/h4JUvkZ.png)
-![Resultado](https://i.imgur.com/YMgSriK.png)
-![Comando con archivo validate](https://i.imgur.com/Lxm5rNy.png)
-![Resultado](https://i.imgur.com/Urj775C.png)
