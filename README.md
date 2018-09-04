@@ -13,7 +13,7 @@ la información que se quiere compartir.
 
 Es por eso que 'md-links-verification' lee y analiza archivos en formato `Markdown`, además extrae y verifica los links que contengan.
 
-### Instalación
+## Instalación
 
 Instalar como dependencia:
 `npm i md-links-verification`
@@ -23,8 +23,8 @@ Instalar como dependencia:
 Instalar como interfaz
 `npm install -g https://github.com/Laboratoria/scl-2018-01-FE-markdown`
 
-## USO
-### CLI (Línea de comando)
+### USO
+#### CLI (Línea de comando)
 
 El ejecutable de nuestra aplicación se ejecuta de la siguiente manera:
 
