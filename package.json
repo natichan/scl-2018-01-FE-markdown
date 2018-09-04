@@ -1,6 +1,6 @@
 {
   "name": "md-links-verification",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "library in javascript to check links of markdown files ",
   "main": "index.js",
   "bin": {
