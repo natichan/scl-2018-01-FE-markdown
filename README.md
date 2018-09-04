@@ -20,7 +20,7 @@ Instalar como dependencia:
 
 [NPM public library](https://www.npmjs.com/package/md-links-verification)
 
-##USO
+## USO
 ### CLI (Línea de comando)
 
 El ejecutable de nuestra aplicación se ejecuta de la siguiente manera:
