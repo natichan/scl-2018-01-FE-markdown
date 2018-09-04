@@ -8,3 +8,10 @@ describe('validateTypeMarkdownFile(pathFile)', () => {
     expect(mdLinks.validateTypeMarkdownFile('app.js')).not.toBeTruthy();
   });
 });
+describe('function readCompleteFile(pathFile)', () => {
+  test('lee el archivo entregado', () => {
+    return expect(mdLinks.readCompleteFile('README.md')).resolves.toBeTruthy();
+  });
+});
+
+
