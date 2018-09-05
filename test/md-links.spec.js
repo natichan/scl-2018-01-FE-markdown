@@ -30,6 +30,6 @@ describe('function mdLinks(path, options)', () => {
 });
 describe('function validateLink(links)', () => {
   test('recibe los links y retorna cada uno con su estado', () => {
-    return expect(mdLinks.validateLink('https://es.wikipedia.org/wiki/Markdown')).resolves.toBeTruthy();
+    expect(mdLinks.validateLink('https://es.wikipedia.org/wiki/Markdown')).toBeTruthy();
   });
 });
