@@ -33,3 +33,14 @@ describe('function validateLink(links)', () => {
     expect(mdLinks.validateLink('https://es.wikipedia.org/wiki/Markdown')).toBeTruthy();
   });
 });
+describe('function markdownLinkExtractor(pathFile, markdown, position)', () => {
+  test('recibe tres argumentos y retorna un array de objetos con los parametros entregados', () => {
+    expect(mdLinks.markdownLinkExtractor('/home/laboratoria/Documents/Laboratoria/Proyectos/scl-2018-01-FE-markdown/README.md', '[NPM public library](https://www.npmjs.com/package/md-links-verification)', 21)).toEqual([{
+      'href': 'https://www.npmjs.com/package/md-links-verification',
+      'line': 21,
+      'path': '/home/laboratoria/Documents/Laboratoria/Proyectos/scl-2018-01-FE-markdown/README.md',
+      'text': 'NPM public library',
+      'title': null,
+    }]);
+  });
+});
