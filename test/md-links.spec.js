@@ -28,3 +28,8 @@ describe('function mdLinks(path, options)', () => {
     return expect(mdLinks.mdLinks('README.md', '--validate')).resolves.toBeTruthy();
   });
 });
+describe('function validateLink(links)', () => {
+  test('recibe los links y retorna cada uno con su estado', () => {
+    return expect(mdLinks.validateLink('https://es.wikipedia.org/wiki/Markdown')).resolves.toBeTruthy();
+  });
+});
