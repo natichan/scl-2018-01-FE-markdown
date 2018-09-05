@@ -19,7 +19,7 @@ describe('function convertToAbsolutePath(pathFile)', () => {
   });
 });
 describe('function processAndExtractFile(pathFile)', () => {
-  test('lee el archivo entregado', () => {
+  test('lee el archivo entregado, lo extrae y me resuelve en función con posición, ruta, y archivo mediante promesa', () => {
     return expect(mdLinks.processAndExtractFile('README.md')).resolves.toBeTruthy();
   });
 });
