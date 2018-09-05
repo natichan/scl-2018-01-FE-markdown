@@ -23,3 +23,8 @@ describe('function processAndExtractFile(pathFile)', () => {
     return expect(mdLinks.processAndExtractFile('README.md')).resolves.toBeTruthy();
   });
 });
+describe('function mdLinks(path, options)', () => {
+  test('función integra las demás funciones y resuelve en los links y la validación', () => {
+    return expect(mdLinks.mdLinks('README.md', '--validate')).resolves.toBeTruthy();
+  });
+});
