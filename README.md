@@ -79,3 +79,6 @@ Versión con README
 Versión con dependencias instaladas para ser instaladas a nivel global, readme actualizado.
 * 1.0.5
 Versión con test para cada función.
+
+## Desarrollado para
+[Laboratoria](https://www.laboratoria.la/)
