@@ -2,7 +2,8 @@
 
 Markdown es un lenguaje de marcado ligero muy popular entre developers. Estos archivos `Markdown` normalmente contienen _links_  que muchas veces están rotos o ya no son válidos y eso perjudica mucho el valor de la información que se quiere compartir. Md-links-verification es una librería que lee y analiza archivos en formato Markdown, además extrae y verifica los links que contengan. 
 
-![markdown](https://user-images.githubusercontent.com/39122711/47360814-c6060a80-d6a6-11e8-8342-b6a2ea5a47f7.png)
+![screenshot from 2018-10-23 14-02-31](https://user-images.githubusercontent.com/39122711/47377699-60c51000-d6cc-11e8-81d6-096b5e4eafdd.png)
+
 
 ## Desarrollado para
 [Laboratoria](https://www.laboratoria.la/)
