@@ -1,9 +1,12 @@
 # MD LINKS VERIFICATION
 
-Md-links-verification es una librería que lee y analiza archivos en formato Markdown, además extrae y verifica los links que contengan. 
-
+Md-links-verification es una librería que lee y analiza archivos en formato Markdown, además extrae y verifica los links que contengan. Es muy común encontrar varios archivos en ese formato en cualquier tipo de repositorio
+empezando por el tradicional `README.md`.
 
 ![markdown](https://user-images.githubusercontent.com/39122711/47360814-c6060a80-d6a6-11e8-8342-b6a2ea5a47f7.png)
+
+## Desarrollado para
+[Laboratoria](https://www.laboratoria.la/)
 
 ## Introducción
 
@@ -85,5 +88,4 @@ Versión con dependencias instaladas para ser instaladas a nivel global, readme 
 * 1.0.5
 Versión con test para cada función.
 
-## Desarrollado para
-[Laboratoria](https://www.laboratoria.la/)
+
