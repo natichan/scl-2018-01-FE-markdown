@@ -8,7 +8,7 @@ empezando por el tradicional `README.md`.
 ## Desarrollado para
 [Laboratoria](https://www.laboratoria.la/)
 
-## Introducción
+### Introducción
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
 ligero muy popular entre developers. Es muy común
@@ -21,7 +21,7 @@ la información que se quiere compartir.
 
 Es por eso que 'md-links-verification' te ofrece leer y analizar este tipo de archivos, además de extraer y verificar los links que contengan para saber si el estado de cada uno aún es válido.
 
-## Instalación
+### Instalación
 
 Instalar como dependencia:
 `npm i md-links-verification`
@@ -74,7 +74,7 @@ URL.
 ![Comando con archivo validate](https://i.imgur.com/Lxm5rNy.png)
 ![Resultado](https://i.imgur.com/Urj775C.png)
 
-## Versiones
+### Versiones
 * 1.0.0
 Versión de prueba (sin funcionamiento)
 * 1.0.1
